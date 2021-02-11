@@ -31,6 +31,8 @@ void main(List<String> args) async {
     return;
   }
 
+  await loadConfigApplication();
+
   final appRouter = Router();
   RouterConfigure(appRouter).configure();
   
@@ -50,7 +52,7 @@ Future<void> loadConfigApplication() async {
   await load();
 
   final databaseConfig = DatabaseConnectionConfig(
-    host: Platform.environment['DATABASE_HOST'] ?? env['databaseHose'],
+    host: Platform.environment['DATABASE_HOST'] ?? env['databaseHost'],
     user: Platform.environment['DATABASE_USER'] ?? env['databaseUser'],
     port: Platform.environment['DATABASE_PORT'] ?? env['databasePort'],
     password: Platform.environment['DATABASE_PASSWORD'] ?? env['databasePassword'],

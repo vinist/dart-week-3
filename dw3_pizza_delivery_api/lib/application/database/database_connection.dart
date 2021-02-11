@@ -12,7 +12,7 @@ class DatabaseConnection implements IDatabaseConnection {
 
   @override
   Future<MySqlConnection> openConnection() {
-    MySqlConnection.connect(ConnectionSettings(
+    return MySqlConnection.connect(ConnectionSettings(
         host: _connectionConfig.host,
         port: int.parse(_connectionConfig.port),
         password: _connectionConfig.password,
