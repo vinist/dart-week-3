@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'user_controller.dart';
+part of 'menu_controller.dart';
 
 // **************************************************************************
 // ShelfRouterGenerator
 // **************************************************************************
 
-Router _$UserControllerRouter(UserController service) {
+Router _$MenuControllerRouter(MenuController service) {
   final router = Router();
-  router.add('POST', r'/', service.register);
-  router.add('POST', r'/auth', service.login);
+  router.add('GET', r'/', service.findAll);
   return router;
 }
