@@ -1,6 +1,6 @@
-import 'package:dw3_pizza_delivery_app/app/models/user_logged.dart';
-import 'package:dw3_pizza_delivery_app/app/modules/home/home_page.dart';
-import 'package:dw3_pizza_delivery_app/app/modules/login/login_page.dart';
+import 'package:dw3_pizza_delivery_app/models/user_logged.dart';
+import 'package:dw3_pizza_delivery_app/modules/home/home_page.dart';
+import 'package:dw3_pizza_delivery_app/modules/login/login_page.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
