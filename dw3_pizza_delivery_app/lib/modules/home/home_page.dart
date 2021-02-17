@@ -1,9 +1,10 @@
 import 'package:dw3_pizza_delivery_app/components/pizza_delivery_bottom_navigation.dart';
+import 'package:dw3_pizza_delivery_app/modules/home/home_controller.dart';
 import 'package:dw3_pizza_delivery_app/modules/home/widgets/home_header.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomePage extends GetView<HomePage> {
+class HomePage extends GetView<HomeController> {
 
   static const String ROUTE_PAGE = '/home';
 
@@ -32,11 +33,11 @@ class HomePage extends GetView<HomePage> {
                   width: double.infinity,
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
+                    child: ListTile(
+                      onTap: () => controller.openMenu("Grande"),
+                      title: Text(
                         'Grande',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 16, color: Get.theme.accentColor),
                       ),
                     ),
                   ),
@@ -46,11 +47,11 @@ class HomePage extends GetView<HomePage> {
                   width: double.infinity,
                   child: Align(
                     alignment: Alignment.centerLeft,
-                    child: TextButton(
-                      onPressed: () {},
-                      child: Text(
+                    child: ListTile(
+                      onTap: () => controller.openMenu("Brotinho"),
+                      title: Text(
                         'Brotinho',
-                        style: TextStyle(fontSize: 16),
+                        style: TextStyle(fontSize: 16, color: Get.theme.accentColor),
                       ),
                     ),
                   ),
