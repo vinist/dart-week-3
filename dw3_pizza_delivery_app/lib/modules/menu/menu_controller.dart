@@ -1,7 +1,12 @@
 import 'package:dw3_pizza_delivery_app/models/menu_item_model.dart';
 import 'package:dw3_pizza_delivery_app/models/menu_model.dart';
+import 'package:dw3_pizza_delivery_app/modules/shoppingCard/shopping_card_controller.dart';
+import 'package:dw3_pizza_delivery_app/modules/shoppingCard/shopping_card_page.dart';
 import 'package:dw3_pizza_delivery_app/repositories/menu_repository.dart';
+import 'package:dw3_pizza_delivery_app/repositories/order_repository.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 class MenuController extends GetxController {
 
@@ -28,6 +33,22 @@ class MenuController extends GetxController {
     } else {
       _flavorsSelected.add(item);
     }
+  }
+
+  void goToShoppingCard() async {
+    Get.put(OrderRepository(Get.find()));
+    Get.put(ShoppingCardController(Get.find(), _flavorsSelected));
+
+    await showBarModalBottomSheet(
+        context: Get.context,
+        isDismissible: false,
+        builder: (_) {
+          return ShoppingCardPage();
+        }
+    );
+
+    Get.delete<OrderRepository>();
+    Get.delete<ShoppingCardController>();
   }
 
 }

@@ -4,7 +4,6 @@ import 'package:dw3_pizza_delivery_app/modules/menu/menu_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
 
 class MenuGroup extends GetView<MenuController> {
 

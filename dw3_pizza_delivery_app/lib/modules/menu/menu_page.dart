@@ -23,7 +23,6 @@ class MenuPage extends GetView<MenuController> {
           onPressed: () => Get.back(),
           color: Colors.black,
         ),
-
       ),
       body: SizedBox(
         child: Column(

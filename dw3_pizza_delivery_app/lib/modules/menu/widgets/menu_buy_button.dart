@@ -30,7 +30,7 @@ class MenuBuyButton extends GetView<MenuController> {
                       controller.flavorsSelected.isEmpty ? Colors.grey[200] : Colors.red
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () => controller.goToShoppingCard(),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
