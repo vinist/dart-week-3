@@ -2,10 +2,10 @@ import 'package:get/get.dart';
 
 class RestClient extends GetConnect {
 
-  String baseUrl = "http://192.168.1.17:8080";
+  String baseUrl = "http://10.0.2.2:8080";
 
   RestClient() {
-    httpClient.baseUrl = baseUrl;
+    httpClient.baseUrl = this.baseUrl;
   }
 
 }
