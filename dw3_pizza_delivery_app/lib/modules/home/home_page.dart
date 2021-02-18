@@ -7,11 +7,12 @@ import 'package:get/get.dart';
 class HomePage extends GetView<HomeController> {
 
   static const String ROUTE_PAGE = '/home';
+  static const int NAVIGATION_BAR_INDEX = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: PizzaDeliveryBottomNavigation(),
+      bottomNavigationBar: PizzaDeliveryBottomNavigation(NAVIGATION_BAR_INDEX),
       body: Column(
         children: [
           HomeHeader(),
